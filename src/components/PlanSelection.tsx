@@ -21,45 +21,43 @@ export default function PlanSelection({ onSelectPlan }: PlanSelectionProps) {
       name: 'Básico',
       price: 'R$ 197',
       period: '/mês',
-      description: 'Ideal para consultórios iniciantes',
+      description: 'Para organização inicial do consultório',
       features: [
-        'Até 500 conversas/mês',
-        'Agendamento automático',
+        'Chat de atendimento via WhatsApp',
+        'Agendamento automatizado',
         'Lembretes de consulta',
         'Suporte por email',
-        'Dashboard básico'
+        'Acesso básico'
       ],
       popular: false
     },
     {
-      name: 'Profissional',
+      name: 'Intermediário',
       price: 'R$ 397',
       period: '/mês',
-      description: 'Perfeito para clínicas em crescimento',
+      description: 'Gestão inteligente baseada em dados',
       features: [
-        'Até 2.000 conversas/mês',
-        'Agendamento automático',
-        'Lembretes de consulta',
-        'Confirmação de presença',
-        'Analytics completo',
-        'Suporte prioritário',
-        'Integrações avançadas'
+        'Tudo do plano Básico',
+        'Painel de Analytics completo',
+        'Métricas de engajamento',
+        'Histórico de pacientes',
+        'Relatórios personalizados',
+        'Suporte prioritário'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
+      name: 'Avançado',
       price: 'R$ 797',
       period: '/mês',
-      description: 'Para grandes clínicas e hospitais',
+      description: 'Automação total e IA humanizada',
       features: [
-        'Conversas ilimitadas',
-        'Todos os recursos Pro',
-        'Múltiplas especialidades',
-        'API personalizada',
-        'Treinamento customizado',
-        'Suporte 24/7',
-        'Gerente de conta dedicado'
+        'Tudo do plano Intermediário',
+        'Assistente virtual com IA humanizada',
+        'Integrações personalizadas',
+        'Suporte Premium',
+        'Onboarding dedicado',
+        'API de integração'
       ],
       popular: false
     }
@@ -71,7 +69,7 @@ export default function PlanSelection({ onSelectPlan }: PlanSelectionProps) {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Escolha o plano ideal para você</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comece com 14 dias de teste grátis. Cancele quando quiser, sem taxas ocultas.
+            Comece com 30 dias de teste grátis. Cancele quando quiser, sem taxas ocultas.
           </p>
         </div>
 
@@ -121,7 +119,7 @@ export default function PlanSelection({ onSelectPlan }: PlanSelectionProps) {
                       : 'bg-white hover:bg-gray-50 text-gray-900 border border-black/10'
                   }`}
                 >
-                  Começar Agora
+                  Selecionar Plano
                 </Button>
               </CardFooter>
             </Card>
@@ -129,7 +127,7 @@ export default function PlanSelection({ onSelectPlan }: PlanSelectionProps) {
         </div>
 
         <div className="mt-16 text-center text-gray-600">
-          <p>Todos os planos incluem 14 dias de teste grátis</p>
+          <p>Todos os planos incluem 30 dias de teste grátis para validação.</p>
         </div>
       </div>
     </div>

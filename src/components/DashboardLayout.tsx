@@ -71,7 +71,7 @@ export default function DashboardLayout({ onLogout }: DashboardLayoutProps) {
               <div className="size-10 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/20">
                 <Bot className="size-5 text-white" />
               </div>
-              <span className="text-lg font-semibold tracking-tight text-gray-900">MedBot 360</span>
+              <span className="text-lg font-semibold tracking-tight text-gray-900">VittaLink</span>
             </div>
           </div>
 
@@ -138,11 +138,11 @@ export default function DashboardLayout({ onLogout }: DashboardLayoutProps) {
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center gap-3 px-3 py-3 rounded-xl bg-gray-50 w-full hover:bg-gray-100 transition-colors">
                   <div className="size-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
-                    <span className="text-white font-semibold">DC</span>
+                    <span className="text-white font-semibold">CA</span>
                   </div>
                   <div className="flex-1 min-w-0 text-left">
-                    <p className="text-sm font-medium text-gray-900 truncate">Dr. Carlos Silva</p>
-                    <p className="text-xs text-gray-500 truncate">Plano Profissional</p>
+                    <p className="text-sm font-medium text-gray-900 truncate">Dra. Camila dos Anjos</p>
+                    <p className="text-xs text-gray-500 truncate">Plano Intermediário</p>
                   </div>
                 </button>
               </DropdownMenuTrigger>

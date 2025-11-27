@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
-import { Bot, MessageSquare, TrendingDown, BarChart3, Clock, Calendar, Shield, Zap, Users, CheckCircle2, Star, ArrowRight } from 'lucide-react';
+import { Bot, MessageSquare, TrendingDown, BarChart3, Clock, Users, CheckCircle2, Star, ArrowRight, Shield } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export default function LandingPage() {
@@ -10,28 +10,28 @@ export default function LandingPage() {
     {
       icon: TrendingDown,
       title: 'Reduza o Churn',
-      description: 'Mantenha seus pacientes engajados com lembretes automáticos e atendimento personalizado 24/7.',
+      description: 'Diminua cancelamentos e faltas com lembretes automáticos e confirmações inteligentes.',
       color: 'from-green-500 to-green-600',
       shadowColor: 'shadow-green-500/20',
     },
     {
       icon: MessageSquare,
-      title: 'Atendimento Inteligente',
-      description: 'IA treinada para responder dúvidas comuns e agendar consultas automaticamente.',
+      title: 'Comunicação Humanizada',
+      description: 'Secretária virtual com IA que interage via WhatsApp com linguagem natural e empática.',
       color: 'from-blue-500 to-blue-600',
       shadowColor: 'shadow-blue-500/20',
     },
     {
       icon: BarChart3,
-      title: 'Analytics Completo',
-      description: 'Acompanhe métricas importantes e tome decisões baseadas em dados reais do seu consultório.',
+      title: 'Gestão Baseada em Dados',
+      description: 'Dashboards com indicadores de desempenho, taxas de retorno e eficiência operacional.',
       color: 'from-purple-500 to-purple-600',
       shadowColor: 'shadow-purple-500/20',
     },
     {
-      icon: Clock,
-      title: 'Disponível 24/7',
-      description: 'Atendimento ininterrupto, mesmo fora do horário comercial do seu consultório.',
+      icon: Shield,
+      title: 'Segurança e LGPD',
+      description: 'Dados armazenados com segurança e total conformidade com a Lei Geral de Proteção de Dados.',
       color: 'from-amber-500 to-amber-600',
       shadowColor: 'shadow-amber-500/20',
     },
@@ -42,23 +42,19 @@ export default function LandingPage() {
     { name: 'Dra. Maria Lima', role: 'Pediatria', initials: 'ML' },
     { name: 'Dr. Pedro Costa', role: 'Ortopedia', initials: 'PC' },
     { name: 'Dra. Ana Silva', role: 'Dermatologia', initials: 'AS' },
-    { name: 'Dr. Carlos Ramos', role: 'Neurologia', initials: 'CR' },
-    { name: 'Dra. Beatriz Souza', role: 'Ginecologia', initials: 'BS' },
-    { name: 'Dr. Rafael Alves', role: 'Oftalmologia', initials: 'RA' },
-    { name: 'Dra. Paula Mendes', role: 'Endocrinologia', initials: 'PM' },
   ];
 
   const testimonials = [
     {
-      name: 'Dr. Carlos Silva',
-      role: 'Clínica São Paulo',
-      text: 'O MedBot 360 transformou completamente nosso atendimento. A taxa de cancelamentos caiu 60% em apenas 2 meses!',
+      name: 'Dra. Camila dos Anjos',
+      role: 'Cardiologista - Recife/PE',
+      text: 'A VittaLink transformou minha rotina. Reduzi os custos com secretariado e meus pacientes adoram a facilidade de agendar pelo WhatsApp.',
       rating: 5,
     },
     {
-      name: 'Dra. Marina Costa',
-      role: 'Consultório Premium',
-      text: 'Finalmente consigo me dedicar mais aos pacientes e menos às tarefas administrativas. Recomendo muito!',
+      name: 'Dr. Luiz Fernando',
+      role: 'Clínica Bem Estar',
+      text: 'Finalmente tenho visibilidade sobre os motivos dos cancelamentos. O dashboard é essencial para minha gestão.',
       rating: 5,
     },
   ];
@@ -66,43 +62,42 @@ export default function LandingPage() {
   const plans = [
     {
       name: 'Básico',
-      price: 'R$ 199',
+      price: 'R$ 197',
       period: '/mês',
-      description: 'Ideal para consultórios iniciantes',
+      description: 'Essencial para organização inicial',
       features: [
-        'Até 500 conversas/mês',
-        'Agendamento automático',
-        'Lembretes por WhatsApp',
+        'Chat de atendimento via WhatsApp',
+        'Agendamento automatizado',
+        'Lembretes de consulta',
         'Suporte por email',
       ],
       popular: false,
     },
     {
-      name: 'Profissional',
-      price: 'R$ 399',
+      name: 'Intermediário',
+      price: 'R$ 397',
       period: '/mês',
-      description: 'Para clínicas em crescimento',
+      description: 'Gestão inteligente para crescimento',
       features: [
-        'Até 2.000 conversas/mês',
-        'Agendamento + confirmações',
-        'Analytics completo',
-        'Suporte prioritário',
-        'Integração calendário',
+        'Tudo do plano Básico',
+        'Painel de Analytics completo',
+        'Métricas de engajamento',
+        'Histórico de pacientes',
+        'Relatórios personalizados',
       ],
       popular: true,
     },
     {
-      name: 'Enterprise',
-      price: 'R$ 799',
+      name: 'Avançado',
+      price: 'R$ 797',
       period: '/mês',
-      description: 'Para grandes clínicas',
+      description: 'Potência máxima em automação',
       features: [
-        'Conversas ilimitadas',
-        'IA personalizada',
-        'Multi-especialidades',
-        'Suporte 24/7',
+        'Tudo do plano Intermediário',
+        'Assistente virtual com IA humanizada',
+        'Integrações personalizadas',
+        'Suporte Premium prioritário',
         'Onboarding dedicado',
-        'API personalizada',
       ],
       popular: false,
     },
@@ -117,19 +112,18 @@ export default function LandingPage() {
             <div className="size-10 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/20">
               <Bot className="size-5 text-white" />
             </div>
-            <span className="text-lg font-semibold tracking-tight text-gray-900">Vitta Link</span>
+            <span className="text-lg font-semibold tracking-tight text-gray-900">VittaLink</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">Sobre</a>
             <a href="#benefits" className="text-gray-600 hover:text-gray-900 transition-colors">Benefícios</a>
-            <a href="#team" className="text-gray-600 hover:text-gray-900 transition-colors">Time</a>
             <a href="#plans" className="text-gray-600 hover:text-gray-900 transition-colors">Planos</a>
           </nav>
           <Button 
             onClick={() => navigate('/criar-conta')}
             className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg shadow-green-500/25"
           >
-            Cadastrar-se
+            Teste Grátis
           </Button>
         </div>
       </header>
@@ -143,14 +137,13 @@ export default function LandingPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full size-2 bg-green-500"></span>
               </span>
-              Inovação em atendimento médico
+              Tecnologia para uma saúde mais humana
             </div>
-            <h1 className="text-4xl md:text-5xl text-gray-900">
-              Secretária Virtual 360° para Consultórios
+            <h1 className="text-4xl md:text-5xl text-gray-900 font-bold leading-tight">
+              Conecte Pacientes e Consultórios com Inteligência
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              O MedBot 360 é a solução completa para automatizar o atendimento do seu consultório médico. 
-              Reduza o churn, melhore a experiência dos pacientes e otimize sua agenda com inteligência artificial.
+              A VittaLink é a plataforma SaaS que une automação e humanização. Reduza o churn, otimize sua agenda e ofereça um atendimento empático 24/7 via WhatsApp.
             </p>
             <div className="flex gap-4">
               <Button 
@@ -158,7 +151,7 @@ export default function LandingPage() {
                 onClick={() => navigate('/criar-conta')}
                 className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-xl shadow-green-500/25"
               >
-                Começar Agora
+                Começar Teste Grátis
                 <ArrowRight className="size-4 ml-2" />
               </Button>
               <Button 
@@ -167,15 +160,15 @@ export default function LandingPage() {
                 onClick={() => navigate('/login')}
                 className="border-black/10 hover:bg-black/5"
               >
-                Entrar
+                Fazer Login
               </Button>
             </div>
           </div>
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-black/10 border border-black/[0.08]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1758202292826-c40e172eed1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwY2xpbmljJTIwbW9kZXJufGVufDF8fHx8MTc2NDE5Mjk1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Consultório médico moderno"
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc2NDIwNDY4OXww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Tecnologia médica"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -185,8 +178,8 @@ export default function LandingPage() {
                   <TrendingDown className="size-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-2xl">60%</p>
-                  <p className="text-sm text-gray-600">Redução de Churn</p>
+                  <p className="text-2xl font-bold text-gray-900">30%</p>
+                  <p className="text-sm text-gray-600">Menos cancelamentos</p>
                 </div>
               </div>
             </div>
@@ -198,9 +191,9 @@ export default function LandingPage() {
       <section id="benefits" className="bg-white py-20">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">Por que escolher o MedBot 360?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Por que escolher a VittaLink?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Tecnologia de ponta para transformar a gestão do seu consultório
+              Soluções desenhadas para a realidade de consultórios e clínicas modernas.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -214,7 +207,7 @@ export default function LandingPage() {
                   <div className={`size-14 bg-gradient-to-br ${benefit.color} rounded-xl flex items-center justify-center mb-6 shadow-lg ${benefit.shadowColor} group-hover:shadow-xl transition-all duration-300`}>
                     <Icon className="size-7 text-white" />
                   </div>
-                  <h3 className="text-lg text-gray-900 mb-3">{benefit.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                   <p className="text-gray-600 leading-relaxed text-sm">
                     {benefit.description}
                   </p>
@@ -225,37 +218,11 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="py-20">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">Médicos que confiam em nós</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Profissionais de diversas especialidades já estão usando o MedBot 360
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={index}
-                className="group p-6 bg-white border border-black/[0.08] rounded-2xl hover:shadow-lg hover:shadow-black/5 transition-all duration-300 text-center"
-              >
-                <div className="size-20 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-green-500/20 group-hover:shadow-xl group-hover:shadow-green-500/30 transition-all duration-300">
-                  <span className="text-white text-xl">{member.initials}</span>
-                </div>
-                <h4 className="text-gray-900 mb-1">{member.name}</h4>
-                <p className="text-sm text-gray-600">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
       <section className="bg-gradient-to-br from-green-600 via-green-600 to-green-700 py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==')] opacity-50"></div>
         <div className="container mx-auto px-6 max-w-7xl relative">
-          <h2 className="text-center text-white text-3xl md:text-4xl mb-16">O que nossos clientes dizem</h2>
+          <h2 className="text-center text-white text-3xl md:text-4xl font-bold mb-16">O que dizem nossos parceiros</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <div 
@@ -273,7 +240,7 @@ export default function LandingPage() {
                     <Users className="size-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-white">{testimonial.name}</p>
+                    <p className="text-white font-medium">{testimonial.name}</p>
                     <p className="text-green-100 text-sm">{testimonial.role}</p>
                   </div>
                 </div>
@@ -287,9 +254,9 @@ export default function LandingPage() {
       <section id="plans" className="py-20 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">Planos e Preços</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Planos Flexíveis</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Escolha o plano ideal para o tamanho do seu consultório
+              Escolha o plano ideal para o momento do seu consultório. Teste grátis por 30 dias.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -303,15 +270,15 @@ export default function LandingPage() {
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-green-600 to-green-700 text-white text-sm rounded-full shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-green-600 to-green-700 text-white text-sm rounded-full shadow-lg font-medium">
                     Mais Popular
                   </div>
                 )}
                 <div className="mb-6">
-                  <h3 className="text-2xl text-gray-900 mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl text-gray-900">{plan.price}</span>
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
                     <span className="text-gray-600">{plan.period}</span>
                   </div>
                 </div>
@@ -319,7 +286,7 @@ export default function LandingPage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
                       <CheckCircle2 className="size-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -345,33 +312,28 @@ export default function LandingPage() {
         <div className="container mx-auto px-6 py-16 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-gray-900 mb-4">Institucional</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Sobre nós</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Nossa história</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Trabalhe conosco</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Privacidade</a></li>
+              <h3 className="text-gray-900 font-semibold mb-4">VittaLink</h3>
+              <p className="text-gray-600 text-sm mb-4">
+                Transformando a relação entre médicos e pacientes através da tecnologia humanizada.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-gray-900 font-semibold mb-4">Contato</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li>contato@vittalink.com.br</li>
+                <li>Recife, PE</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-gray-900 mb-4">Contato</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>contato@medbot360.com</li>
-                <li>(11) 98765-4321</li>
-                <li>São Paulo, SP</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-gray-900 mb-4">Soluções</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Para médicos</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">Para clínicas</a></li>
-                <li><a href="#" className="hover:text-gray-900 transition-colors">API & Integrações</a></li>
+              <h3 className="text-gray-900 font-semibold mb-4">Legal</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Termos de Uso</a></li>
+                <li><a href="#" className="hover:text-gray-900 transition-colors">Privacidade & LGPD</a></li>
               </ul>
             </div>
           </div>
-          <div className="pt-8 border-t border-black/[0.08] text-center text-gray-600">
-            <p>© 2025 MedBot 360 - Vitta Link. Todos os direitos reservados.</p>
+          <div className="pt-8 border-t border-black/[0.08] text-center text-gray-600 text-sm">
+            <p>© 2025 VittaLink. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

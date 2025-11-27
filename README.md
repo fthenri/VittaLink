@@ -1,7 +1,7 @@
 
   # Chatbot Platform MVP
 
-  This is a code bundle for Chatbot Platform MVP. The original project is available at https://www.figma.com/design/X0uyGoeuBdb1MhLnE04pdP/Chatbot-Platform-MVP.
+  This is a code bundle for Chatbot Platform MVP.
 
   ## Running the code
 

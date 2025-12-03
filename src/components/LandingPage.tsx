@@ -119,12 +119,21 @@ export default function LandingPage() {
             <a href="#benefits" className="text-gray-600 hover:text-gray-900 transition-colors">Benefícios</a>
             <a href="#plans" className="text-gray-600 hover:text-gray-900 transition-colors">Planos</a>
           </nav>
-          <Button 
-            onClick={() => navigate('/criar-conta')}
-            className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg shadow-green-500/25"
-          >
-            Teste Grátis
-          </Button>
+          <div className="flex items-center gap-3">
+            <Button
+              variant="outline"
+              onClick={() => navigate('/login')}
+              className="border-black/10 hover:bg-black/5"
+            >
+              Fazer Login
+            </Button>
+            <Button 
+              onClick={() => navigate('/criar-conta')}
+              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg shadow-green-500/25"
+            >
+              Teste Grátis
+            </Button>
+          </div>
         </div>
       </header>
 

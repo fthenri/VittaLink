@@ -163,7 +163,14 @@ export default function Analytics() {
                       cx="50%"
                       cy="50%"
                       labelLine={false}
-                      label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                      label={(entry) => {
+                        const { name, percent, x, y } = entry as any;
+                        return (
+                          <text x={x} y={y} fill="#000" fontSize={12} textAnchor="middle">
+                            {`${name} ${(percent * 100).toFixed(0)}%`}
+                          </text>
+                        );
+                      }}
                       outerRadius={100}
                       fill="#8884d8"
                       dataKey="value"

@@ -109,9 +109,7 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-black/[0.08]">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between max-w-7xl">
           <div className="flex items-center gap-3">
-            <div className="size-10 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/20">
-              <Bot className="size-5 text-white" />
-            </div>
+            <img src="/Logo_Principal.png" alt="VittaLink Logo" className="size-10 rounded-xl" />
             <span className="text-lg font-semibold tracking-tight text-gray-900">VittaLink</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">

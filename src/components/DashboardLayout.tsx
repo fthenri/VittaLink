@@ -68,9 +68,7 @@ export default function DashboardLayout({ onLogout }: DashboardLayoutProps) {
           {/* Logo */}
           <div className="p-6 border-b border-black/[0.08]">
             <div className="flex items-center gap-3">
-              <div className="size-10 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/20">
-                <Bot className="size-5 text-white" />
-              </div>
+              <img src="/Logo_Principal.png" alt="VittaLink Logo" className="size-10 rounded-xl" />
               <span className="text-lg font-semibold tracking-tight text-gray-900">VittaLink</span>
             </div>
           </div>

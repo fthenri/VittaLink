@@ -40,15 +40,10 @@ export default function SignUp({ onSignUp }: SignUpProps) {
 
         <div className="bg-white rounded-3xl shadow-2xl shadow-black/10 overflow-hidden">
           <div className="grid md:grid-cols-2">
-            {/* Left Side - Image */}
+            {/* Left Side - Decorative panel (image removed per request) */}
             <div className="relative bg-gradient-to-br from-green-100 to-green-50 p-12 flex items-center justify-center min-h-[500px]">
-              <div className="relative w-full h-full flex items-center justify-center">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1759270463144-02b90c57135d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhYnN0cmFjdCUyMG1lZGljYWx8ZW58MXx8fHwxNzY0MjA0Njg5fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Medical abstract"
-                  className="w-full h-full object-cover opacity-60 rounded-2xl"
-                />
-              </div>
+              {/* Image removed - keep panel for layout consistency */}
+              <div className="w-full h-full rounded-2xl" aria-hidden="true" />
             </div>
 
             {/* Right Side - Form */}
